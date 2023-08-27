@@ -1,38 +1,87 @@
-.App {
-  text-align: center;
+::-webkit-scrollbar {
+  width: 0.4rem;
+  position: relative;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+::-webkit-scrollbar-track {
+  display: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+::-webkit-scrollbar-thumb {
+  background: #2B3035;
+  border-radius: 3px;
+  /* -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); */
+}
+
+body{
+  background: #F5F5F5;
+  transition: all 300ms;
+}
+
+.navbar{
+  transition: all 300ms;
+}
+
+.alert{
+  position: absolute;
+  top: 60px;
+  left: 50px;
+  z-index: 9;
+  width: 320px;
+  transition: all ease-in-out 500ms;
+}
+
+.hidden-alert{
+  transform: translateX(calc(-5000px));
+}
+
+.custom-input{
+  width: 250px;
+}
+
+.textform-sub-div-1{
+  width: 75%;
+  margin-bottom: -20px;
+}
+
+.textform-sub-div-2{
+  width: 25%;
+}
+
+@media only screen and (max-width: 991px) {
+  .alert{
+    left: 0;
+    right: 0;
+    margin: auto;
+  }
+
+  .navbar-right{
+    flex-direction: column;
+    align-items: flex-end;
+  }
+
+  .navbar-right > form,
+  .navbar-right > div{
+    align-self: flex-start;
+  }
+
+  .res-custom{
+    flex-direction: column;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@media only screen and (max-width: 1200px) {
+  .textform-main-div-1{
+    flex-direction: column;
   }
-  to {
-    transform: rotate(360deg);
+
+  .textform-sub-div-1{
+    width: 100%;
+    margin-top: -40px;
+  }
+
+  .textform-sub-div-2{
+    width: 100%;
+    margin-top: -40px;
   }
 }
