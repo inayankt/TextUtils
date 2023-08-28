@@ -1,11 +1,12 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 
-export default function About() {
+export default function About(props) {
   return (
     <div className="about-div">
       <p className="display-6 mt-2 mb-2">About us</p>
       <div className="accordion mb-4" id="accordionExample">
-        <div className="accordion-item">
+        <div className="accordion-item" style={(props.mode === 'dark') ? {background: '#2B3035', color: 'white'} : {background: 'white', color: 'black'}}>
           <h2 className="accordion-header">
             <button className="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
               Analyse Your Text
@@ -17,7 +18,7 @@ export default function About() {
             </div>
           </div>
         </div>
-        <div className="accordion-item">
+        <div className="accordion-item" style={(props.mode === 'dark') ? {background: '#2B3035', color: 'white'} : {background: 'white', color: 'black'}}>
           <h2 className="accordion-header">
             <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
               Free to Use
@@ -29,7 +30,7 @@ export default function About() {
             </div>
           </div>
         </div>
-        <div className="accordion-item">
+        <div className="accordion-item" style={(props.mode === 'dark') ? {background: '#2B3035', color: 'white'} : {background: 'white', color: 'black'}}>
           <h2 className="accordion-header">
             <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
               Browser Compatible
@@ -45,3 +46,11 @@ export default function About() {
     </div>
   )
 }
+
+About.propTypes = {
+  mode: PropTypes.string.isRequired,
+};
+
+About.defaultProps = {
+  mode: 'light',
+};

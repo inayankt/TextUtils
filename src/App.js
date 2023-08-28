@@ -30,10 +30,10 @@ function App() {
     <div className="alert alert-success hidden-alert" role="alert" id="copy-alert">
       <strong>Copied!</strong> Edited text copied successfully.
     </div>
-    <Navbar title='TextUtils' mode={mode} toggleMode={toggleMode} />
+    <Navbar imgSrc='android-chrome-192x192.png' title='TextUtils' mode={mode} toggleMode={toggleMode} />
     <div className="container mt-5 mb-4">
         <Routes>
-          <Route exact path="/about" element={ <About mode={mode} /> } />
+          <Route exact path="/about" element={ <About /> } />
           <Route exact path="/" element={ <Textform heading='Enter the text to analyse below' phInput='Type your text here...' phOutput='Edited text will appear here...' rows={7} mode={mode} /> } />
         </Routes>
     </div>
