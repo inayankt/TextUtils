@@ -5,6 +5,12 @@ import { Link } from 'react-router-dom';
 export default function Navbar(props) {
   const [page, setPage] = useState('home');
 
+  if(page === 'home'){
+    document.title = 'TextUtils | Home';
+  } else {
+    document.title = 'TextUtils | About';
+  }
+
   return (
     <>
     <nav className={`navbar fixed-top navbar-expand-lg bg-body-tertiary border-bottom bg-${props.mode}`} data-bs-theme={props.mode}>

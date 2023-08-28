@@ -7,7 +7,6 @@ import {
   BrowserRouter as Router,
   Routes,
   Route,
-  Link
 } from "react-router-dom";
 
 function App() {
@@ -34,8 +33,8 @@ function App() {
     <Navbar title='TextUtils' mode={mode} toggleMode={toggleMode} />
     <div className="container mt-5 mb-4">
         <Routes>
-          <Route path="/about" element={ <About mode={mode} /> } />
-          <Route path="/" element={ <Textform heading='Enter the text to analyse below' phInput='Type your text here...' phOutput='Edited text will appear here...' rows={7} mode={mode} /> } />
+          <Route exact path="/about" element={ <About mode={mode} /> } />
+          <Route exact path="/" element={ <Textform heading='Enter the text to analyse below' phInput='Type your text here...' phOutput='Edited text will appear here...' rows={7} mode={mode} /> } />
         </Routes>
     </div>
     </Router>
