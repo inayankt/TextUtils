@@ -103,8 +103,8 @@ export default function Textform(props) {
       <div className="textform-sub-div-2 mt-4">
         <p className="display-6 mt-0 mb-2">Text summary</p>
         <div>Your entered text containes:</div>
-        <div>{input.length} characters and {(input.length === 0) ? 0 : input.trim().split(/[ ]+/).length} words</div>
-        <div>Time to read: {(input.length === 0) ? 0 : 0.008 * input.split(' ').length} minutes</div>
+        <div>{input.length} characters and {input.split(/[ ]+/).filter((w) => { return (w !== "") }).length} words</div>
+        <div>Time to read: {0.008 * input.split(/[ ]+/).filter((w) => { return (w !== "") }).length} minutes</div>
       </div>
     </div>
     <hr />
