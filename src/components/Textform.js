@@ -6,25 +6,22 @@ export default function Textform(props) {
   const [output, setOutput] = useState('');
 
   const convertUpperCase = () => {
-    setOutput(input.toUpperCase());
+    setOutput(input.trim().toUpperCase());
   };
 
   const convertLowerCase = () => {
-    setOutput(input.toLowerCase());
+    setOutput(input.trim().toLowerCase());
   };
 
   const removeExtraSpaces = () => {
-    setOutput(input.split(/[ ]+/).join(' '));
+    setOutput(input.trim().split(/[ ]+/).join(' '));
   };
 
-  const makeTitle = () => {
+  const capitalizeText = () => {
     let wordsList = input.split(/[ ]+/);
     let finalWords = [];
     for(let w of wordsList){
-      let word = w[0].toUpperCase();
-      for(let i=1; i<w.length; i++){
-        word += w[i];
-      }
+      let word = w[0].toUpperCase() + w.slice(1).toLowerCase();
       finalWords.push(word);
     }
     setOutput(finalWords.join(' '));
@@ -85,11 +82,11 @@ export default function Textform(props) {
           <textarea className="form-control" id="output-text" rows={props.rows} placeholder={props.phOutput} value={output} onChange={handleOnChangeOutput}></textarea>
         </div>
         <div className="d-flex gap-4">
-          <span>Basic editing: </span>
+          <span>Text formatting: </span>
           <div className="d-flex res-custom mb-0 gap-3">
             <button className={`btn btn-${(props.mode === 'light') ? 'primary' : 'warning'}`} onClick={convertUpperCase}>Convert to Uppercase</button>
             <button className={`btn btn-${(props.mode === 'light') ? 'primary' : 'warning'}`} onClick={convertLowerCase}>Convert to Lowercase</button>
-            <button className={`btn btn-${(props.mode === 'light') ? 'primary' : 'warning'}`} onClick={makeTitle}>Make Title</button>
+            <button className={`btn btn-${(props.mode === 'light') ? 'primary' : 'warning'}`} onClick={capitalizeText}>Capitalize</button>
             <button className={`btn btn-${(props.mode === 'light') ? 'primary' : 'warning'}`} onClick={removeExtraSpaces}>Remove Extra Spaces</button>
           </div>
         </div>
@@ -106,14 +103,14 @@ export default function Textform(props) {
       <div className="textform-sub-div-2 mt-4">
         <p className="display-6 mt-0 mb-2">Text summary</p>
         <div>Your entered text containes:</div>
-        <div>{input.length} characters and {(input.length === 0) ? 0 : input.split(' ').length} words</div>
+        <div>{input.length} characters and {(input.length === 0) ? 0 : input.trim().split(/[ ]+/).length} words</div>
         <div>Time to read: {(input.length === 0) ? 0 : 0.008 * input.split(' ').length} minutes</div>
       </div>
     </div>
     <hr />
     <div className="textform-main-div-1 w-100">
       <p className="display-6 mt-3 mb-2">Output Preview</p>
-      <p>{(output === '') ? "-- output is empty: no preview available --" : output}</p>
+      <p>{(output === '') ? "Enter your text to preview it here..." : output}</p>
     </div>
     </>
   )
