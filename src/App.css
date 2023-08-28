@@ -52,6 +52,10 @@ body{
   margin-top: 70px;
 }
 
+.accordion{
+  outline: none;
+}
+
 @media only screen and (max-width: 991px) {
   .alert{
     left: 0;
