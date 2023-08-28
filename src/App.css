@@ -48,6 +48,10 @@ body{
   width: 25%;
 }
 
+.about-div{
+  margin-top: 70px;
+}
+
 @media only screen and (max-width: 991px) {
   .alert{
     left: 0;
