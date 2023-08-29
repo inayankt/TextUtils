@@ -4,6 +4,15 @@ import PropTypes from 'prop-types'
 export default function Textform(props) {
   const [input, setInput] = useState('');
   const [output, setOutput] = useState('');
+  const [incSpace, setIncSpace] = useState(1);
+
+  const toggleIncSpace = () => {
+    if(incSpace){
+      setIncSpace(0);
+    } else {
+      setIncSpace(1);
+    }
+  }
 
   const convertUpperCase = () => {
     setOutput(input.trim().toUpperCase());
@@ -116,9 +125,15 @@ export default function Textform(props) {
       <hr style={{margin: '0 0 -30px 0'}} />
       <div className="textform-sub-div-2 mt-4">
         <p className="display-6 mt-0 mb-2">Text summary</p>
-        <div>Your entered text containes:</div>
-        <div>{input.length} characters and {input.split(/\s+/).filter((w) => { return (w !== "") }).length} words</div>
-        <div>Time to read: {0.008 * input.split(/\s+/).filter((w) => { return (w !== "") }).length} minutes</div>
+        <div className="d-flex flex-column gap-1">
+          <div>Your entered text containes:</div>
+          <div>{(incSpace) ? input.length : input.replaceAll(" ", "").length} characters and {input.split(/\s+/).filter((w) => { return (w !== "") }).length} words</div>
+          <div>Time to read: {0.008 * input.split(/\s+/).filter((w) => { return (w !== "") }).length} minutes</div>
+          <div className="form-check form-switch">
+            <input className="form-check-input" type="checkbox" role="switch" id="incSpaceSwitch" onClick={toggleIncSpace} checked={incSpace} />
+            <label className="form-check-label" for="incSpaceSwitch">Include spaces in characters</label>
+          </div>
+        </div>
       </div>
     </div>
     <hr />
