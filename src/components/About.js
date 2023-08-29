@@ -14,7 +14,7 @@ export default function About(props) {
           </h2>
           <div id="collapseOne" className="accordion-collapse collapse show" data-bs-parent="#accordionExample">
             <div className="accordion-body">
-              TextUtils is a versatile web app revolutionizing the way we interact with text. With its user-friendly interface and powerful features, it's your go-to tool for text analysis. Seamlessly paste or input your text to unleash a world of possibilities. From word and character count to sentiment analysis, TextUtils offers a spectrum of utilities that unravel your text's intricacies. Whether you're a writer aiming for conciseness, a student meeting a word limit, or a business decoding customer feedback, TextUtils caters to all. Elevate your understanding of text composition and emotions effortlessly with this indispensable, elegant platform.
+              TxtUtils is a versatile web app revolutionizing the way we interact with text. With its user-friendly interface and powerful features, it's your go-to tool for text analysis. Seamlessly paste or input your text to unleash a world of possibilities. From word and character count to sentiment analysis, TxtUtils offers a spectrum of utilities that unravel your text's intricacies. Whether you're a writer aiming for conciseness, a student meeting a word limit, or a business decoding customer feedback, TxtUtils caters to all. Elevate your understanding of text composition and emotions effortlessly with this indispensable, elegant platform.
             </div>
           </div>
         </div>
@@ -26,7 +26,7 @@ export default function About(props) {
           </h2>
           <div id="collapseTwo" className="accordion-collapse collapse" data-bs-parent="#accordionExample">
             <div className="accordion-body">
-              TextUtils, the ultimate text utility web app, empowers users to delve into text analysis seamlessly. This indispensable tool offers an array of features to dissect your text's complexities, and the best part – it's entirely free to use. From character and word count optimization to sentiment analysis, TextUtils caters to writers, students, businesses, and more. With its user-friendly interface, harness the power of text analysis without any cost. Elevate your writing, comprehend emotions in feedback, and conquer word limits effortlessly with TextUtils. Unleash the potential of your text without limitations, all at no expense.
+              TxtUtils, the ultimate text utility web app, empowers users to delve into text analysis seamlessly. This indispensable tool offers an array of features to dissect your text's complexities, and the best part – it's entirely free to use. From character and word count optimization to sentiment analysis, TxtUtils caters to writers, students, businesses, and more. With its user-friendly interface, harness the power of text analysis without any cost. Elevate your writing, comprehend emotions in feedback, and conquer word limits effortlessly with TxtUtils. Unleash the potential of your text without limitations, all at no expense.
             </div>
           </div>
         </div>
@@ -38,7 +38,7 @@ export default function About(props) {
           </h2>
           <div id="collapseThree" className="accordion-collapse collapse" data-bs-parent="#accordionExample">
             <div className="accordion-body">
-              Meet TextUtils: compatibility with all browsers. Seamlessly analyze text without constraints, as this versatile tool effortlessly adapts to your preferred browser. From tracking word and character counts to unveiling sentiment analysis, TextUtils caters to writers, students, and businesses alike. The best part? It's entirely free to use, making powerful text analysis accessible to everyone. Elevate your writing, understand customer feedback, and conquer language nuances without limitations. Embrace the convenience of browser compatibility and unlock the true potential of your text with TextUtils.
+              Meet TxtUtils: compatibility with all browsers. Seamlessly analyze text without constraints, as this versatile tool effortlessly adapts to your preferred browser. From tracking word and character counts to unveiling sentiment analysis, TxtUtils caters to writers, students, and businesses alike. The best part? It's entirely free to use, making powerful text analysis accessible to everyone. Elevate your writing, understand customer feedback, and conquer language nuances without limitations. Embrace the convenience of browser compatibility and unlock the true potential of your text with TxtUtils.
             </div>
           </div>
         </div>

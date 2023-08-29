@@ -6,9 +6,9 @@ export default function Navbar(props) {
   const [page, setPage] = useState('home');
 
   if(page === 'home'){
-    document.title = 'TextUtils | Home';
+    document.title = 'TxtUtils | Home';
   } else {
-    document.title = 'TextUtils | About';
+    document.title = 'TxtUtils | About';
   }
 
   return (

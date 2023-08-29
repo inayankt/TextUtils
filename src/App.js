@@ -30,7 +30,7 @@ function App() {
     <div className="alert alert-success hidden-alert" role="alert" id="copy-alert">
       <strong>Copied!</strong> Edited text copied successfully.
     </div>
-    <Navbar imgSrc='android-chrome-192x192.png' title='TextUtils' mode={mode} toggleMode={toggleMode} />
+    <Navbar imgSrc='android-chrome-192x192.png' title='TxtUtils' mode={mode} toggleMode={toggleMode} />
     <div className="container mt-5 mb-4">
         <Routes>
           <Route exact path="/about" element={ <About /> } />
