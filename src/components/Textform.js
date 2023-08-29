@@ -127,7 +127,7 @@ export default function Textform(props) {
         <p className="display-6 mt-0 mb-2">Text summary</p>
         <div className="d-flex flex-column gap-1">
           <div>Your entered text containes:</div>
-          <div>{(incSpace) ? input.length : input.replaceAll(" ", "").length} characters and {input.split(/\s+/).filter((w) => { return (w !== "") }).length} words</div>
+          <div>{(incSpace) ? input.length : input.split(/\s+/).join('').length} characters and {input.split(/\s+/).filter((w) => { return (w !== "") }).length} words</div>
           <div>Time to read: {0.008 * input.split(/\s+/).filter((w) => { return (w !== "") }).length} minutes</div>
           <div className="form-check form-switch">
             <input className="form-check-input" type="checkbox" role="switch" id="incSpaceSwitch" onClick={toggleIncSpace} checked={incSpace} />
