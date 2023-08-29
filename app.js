@@ -2,7 +2,7 @@ const express = require('express');
 const path = require('path');
 const app = express();
 
-const port = 80;
+const port = 5000;
 
 app.use(express.static(path.join(__dirname, 'build')));
 
@@ -11,5 +11,5 @@ app.get('/*', (req, res) => {
 });
 
 app.listen(port, () => {
-  console.log(`server started at port:${port}`);
+  console.log(`Server started at port:${port}`);
 });
