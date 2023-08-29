@@ -19,15 +19,16 @@ body{
 
 .navbar{
   transition: all 300ms;
+  z-index: 990;
 }
 
 .alert{
   position: absolute;
-  top: 60px;
-  left: 50px;
-  z-index: 9;
+  top: 50px;
+  left: 55px;
+  z-index: 1000;
   width: 320px;
-  transition: all ease-in-out 500ms;
+  transition: all ease-in-out 600ms;
 }
 
 .hidden-alert{
@@ -60,6 +61,10 @@ body{
     left: 0;
     right: 0;
     margin: auto;
+  }
+
+  .hidden-alert{
+    transform: translateY(-5000px);
   }
 
   .navbar-right{
