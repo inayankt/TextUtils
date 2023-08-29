@@ -131,7 +131,7 @@ export default function Textform(props) {
           <div>Time to read: {0.008 * input.split(/\s+/).filter((w) => { return (w !== "") }).length} minutes</div>
           <div className="form-check form-switch">
             <input className="form-check-input" type="checkbox" role="switch" id="incSpaceSwitch" onClick={toggleIncSpace} checked={incSpace} />
-            <label className="form-check-label" for="incSpaceSwitch">Include spaces in characters</label>
+            <label className="form-check-label" for="incSpaceSwitch">Include white spaces in characters</label>
           </div>
         </div>
       </div>

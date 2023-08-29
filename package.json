@@ -39,18 +39,10 @@
   "description": "This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).",
   "main": "app.js",
   "devDependencies": {},
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/inayankt/TextUtils.git"
-  },
   "keywords": [
     "react_app",
     "text_utility"
   ],
   "author": "Nayan Kumar",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/inayankt/TextUtils/issues"
-  },
-  "homepage": "https://github.com/inayankt/TextUtils#readme"
+  "license": "ISC"
 }
