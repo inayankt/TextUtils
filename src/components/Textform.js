@@ -19,11 +19,25 @@ export default function Textform(props) {
 
   const capitalizeText = () => {
     let wordsList = input.split(/[ ]+/).filter((w) => { return w !== "" });
+    console.log(wordsList);
     let finalWords = [];
     for(let w of wordsList){
-      let word = w[0].toUpperCase() + w.slice(1).toLowerCase();
-      finalWords.push(word);
+      if(w.search('\n') !== -1){
+        let words = w.split('\n');
+        console.log(words);
+        let wordL = []
+        let word = "";
+        for(let w2 of words){
+          if(w2.length > 0) wordL.push(w2[0].toUpperCase() + w2.slice(1).toLowerCase());
+          else wordL.push(w2);
+        }
+        word = wordL.join('\n');
+        finalWords.push(word);
+      } else {
+        finalWords.push(w[0].toUpperCase() + w.slice(1).toLowerCase());
+      }
     }
+    console.log(finalWords);
     setOutput(finalWords.join(' '));
   }
 

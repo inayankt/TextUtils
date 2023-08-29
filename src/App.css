@@ -23,7 +23,7 @@ body{
 }
 
 .alert{
-  position: absolute;
+  position: fixed;
   top: 50px;
   left: 55px;
   z-index: 1000;
