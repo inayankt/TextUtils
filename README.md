@@ -10,6 +10,10 @@ This app can be used for formatting text, counting characters and various such f
 
 The demo is available to view [here](https://mytxtutils.netlify.app).
 
+## Tech Stack
+
+- ReactJS
+- Bootstrap
 
 ## How to run the React app in your local environment
 
